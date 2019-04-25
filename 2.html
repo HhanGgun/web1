@@ -3,32 +3,82 @@
     <head>
         <title>Tad's Web1 - CSS</title>
         <meta charset="UTF-8">
+        <style>
+            #active {
+                color:red;
+                text-decoration: underline;
+                font-size: 20px;
+            }
+            a {
+                color:black;
+                text-decoration: none;
+            }
+            h1 {
+                font-size: 50px;
+                text-align: center;
+                border-bottom: 5px double gray;
+                padding: 20px;
+                margin: 0;
+            }
+            h2 {
+                padding: 0;
+                margin: 0;
+            }
+            #index ol {
+                width: 100px;
+                padding: 10px;
+                margin-left: 20px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            #index {
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                height:initial;
+            }
+            #content {
+                border-left: 1px solid gray;
+                padding: 10px;
+            }
+            @media(max-width:800px) {
+                #index {
+                    display: block;
+                }
+                #content {
+                    border-left: none;
+                }
+            }
+        </style>
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
-        <ol>
-            <li><a href="1.html">HTML</a></li>
-            <li><a href="2.html">CSS</a></li>
-            <li><a href="3.html">JavaScript</a></li>
-        </ol>
-        <h2>CSS란 무엇인가?</h2>
-        <p style="margin-bottom: 40px">
-        Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
-        </p>
-        <p style="margin-bottom: 40px">
-        CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.
-        </p>        
-        <p style="margin-bottom: 40px">
-        Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.
-        </p>
-        <p style="margin-bottom: 40px">
-        The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.
-        </p>
-        <p style="margin-bottom: 40px">
-        The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.
-        </p>
-        <p style="margin-bottom: 40px">
-        In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL. 
-        </p>
+        <div id="index">
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html" id="active">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+            <div id="content">
+                <h2>CSS란 무엇인가?</h2>
+                <p style="margin-bottom: 40px">
+                Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+                </p>
+                <p style="margin-bottom: 40px">
+                CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.
+                </p>        
+                <p style="margin-bottom: 40px">
+                Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.
+                </p>
+                <p style="margin-bottom: 40px">
+                The name cascading comes from the specified priority scheme to determine which style rule applies if more than one rule matches a particular element. This cascading priority scheme is predictable.
+                </p>
+                <p style="margin-bottom: 40px">
+                The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.
+                </p>
+                <p>
+                In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL. 
+                </p>
+            </div>
+        </div>
     </body>
 </html>
